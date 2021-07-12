@@ -1,0 +1,47 @@
+<div class="contenido">
+    <div class="row">
+        <div class="col-lg-6 form-inline">
+            <input type="text" name="namesearch" class="form-control form-control-lg text-center m-3" [(ngModel)]="filts.nameSearch" placeholder="&#xF00e; Buscar Producto" style="font-family: FontAwesome;">
+            <button type="submit" (click)="buscarProducto()" class="btn btn-info btn-lg m-3 paginc">Buscar</button>
+            <button type="submit" (click)="ngOnInit()" class="btn btn-info btn-lg m-3 paginc">Todos los productos</button>
+        </div>
+        <div class="col-lg-6">
+            <div class="m-3">
+                <app-paginacion [nPaginas]="cantPaginas" (irPagina)="sigPag($event)"></app-paginacion>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-columns m-3">
+        <div class="card bg-dark h-100 crd-pro" *ngFor="let pro of productos">
+            <div>
+                <div class="card-header bg-dark border-warning text-warning text-center">{{ pro.pro_nombre }}</div>
+                <div id="carouselExampleControls-{{pro.pro_id}}" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div *ngIf="pro.pro_foto1" class="carousel-item active">
+                            <img src="{{ pathIm + pro.pro_foto1 }}" class="d-block w-100 y-50 img_prod" alt="..." />
+                        </div>
+                        <div *ngIf="pro.pro_foto2" class="carousel-item">
+                            <img src="{{ pathIm + pro.pro_foto2 }}" class="d-block w-100 img_prod" alt="..." />
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls-{{pro.pro_id}}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls-{{pro.pro_id}}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-warning">{{ pro.pro_descripcion }}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <app-paginacion [nPaginas]="cantPaginas" (irPagina)="sigPag($event)"></app-paginacion>
+    </div>
+</div>

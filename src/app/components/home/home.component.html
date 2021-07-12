@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Mamba Bootstrap Template - Index</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Vendor CSS Files -->
+
+
+    <!-- =======================================================
+  * Template Name: Mamba - v2.0.1
+  * Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <app-header></app-header>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <div class="row">
+        <div class="col-2 p-0" id="menu-lateral">
+            <img class="logo ml-5 pl-1 text-center m-2 " src="../assets/img/logoi.jfif" alt="">
+            <hr style="height:4px;border-width:0;color:gray;background-color:#da732f">
+            <aside id="colorlib-aside" role="complementary" class="js-fullheight">
+                <nav id="main-menu" role="navigation">
+                    <ul *ngFor="let cat of categorias">
+                        <li class="colorlib-active m-2 linkmenu"><a href="#" style="color:#ffffff;  font-family: Lato; ">{{cat.cat_nombre}}</a></li>
+                        <hr style="height:4px;border-width:0;color:gray;background-color:#da732f">
+                    </ul>
+                </nav>
+            </aside>
+            <!-- END COLORLIB-ASIDE -->
+
+        </div>
+        <div class="col p-0">
+            <section id="hero">
+                <div class="hero-container">
+                    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active" style="background-image: url('../assets/img/foto1.jpg');">
+                                <div class="carousel-container">
+                                    <div class="carousel-content container">
+                                        <h2 class="animated fadeInDown titorang" style="color:#da732f;  font-family: fantasy; ">Bienvenidos a <br> <span>Internacional de papeleria y suministros S.A.S</span></h2>
+                                        <h4 class="animated fadeInUp textorang"><strong>Una solucion a tus necesidades,</strong> con una gran variedad de suministros de oficina y papelería, como productos de archivo, accesorios de oficina, productos de papel, entre otros artículos.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 1 -->
+                            <div class="carousel-item" style="background-image: url('../assets/img/foto2.jpg');">
+                                <div class="carousel-container">
+                                    <div class="carousel-content container">
+                                        <h2 class="animated fadeInDown" style="color:#da732f; font-family: fantasy;"><span>Suministro de papeleria.</span></h2>
+                                        <h4 class="animated fadeInUp textorang">Toda una amplia dotación en suministros de papeleria.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-item" style="background-image: url('../assets/img/cafeteria.jpg');">
+                                <div class="carousel-container">
+                                    <div class="carousel-content container">
+                                        <h2 class="animated fadeInDown" style="color:#da732f; font-family: fantasy;">Insumos de cafeteria</h2>
+                                        <h4 class="animated fadeInUp textorang">Distribuimos productos de alta calidad que hacen eficiente el consumo para todo el personal.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-item" style="background-image: url('../assets/img/aseo.jpg');">
+                                <div class="carousel-container">
+                                    <div class="carousel-content container">
+                                        <h2 class="animated fadeInDown" style="color:#da732f; font-family: fantasy;">Productos de aseo</h2>
+                                        <h4 class="animated fadeInUp textorang">Amplio portafolio en productos de aseo que garantizan la limpieza y eficiencia.</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+            <!-- End Hero -->
+        </div>
+    </div>
+
+
+    <!--Inicio Boton de whatssap-->
+    <a href="https://wa.me/573028339959?text=Comunicate%20con%20nosotros" class="whatsapp" target="_blank"><i class="fab fa-whatsapp" style="width:55; height:55;"></i></a>
+    <!--END boton de whatssap-->
+    <app-tienda></app-tienda>
+    <section id="contacto">
+        <app-contacto></app-contacto>
+    </section>
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <app-footer></app-footer>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
+</body>
+
+
+</html>

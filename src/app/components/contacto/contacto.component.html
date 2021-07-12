@@ -1,0 +1,55 @@
+<div class="page-wrapper bg-red font-robo">
+    <div class="wrapper wrapper--w960">
+        <div class="card card-2 m-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Envianos tu mensaje</h2>
+                <div *ngIf="exito" class="input-group alert alert-info" role="alert">
+                    Mensaje enviado correctamente
+                </div>
+                <form autocomplete="off" [formGroup]="frmContact" (ngSubmit)="guardar()">
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Nombres" name="nombre" formControlName="nombre">
+                    </div>
+
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Apellidos" name="apellidos" formControlName="apellidos">
+                    </div>
+
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Correo Electronico" name="correo" formControlName="correo">
+                    </div>
+
+                    <div *ngIf="frmContact.controls.correo.status == 'INVALID' && frmContact.controls.correo.touched" class="input-group alert alert-primary" role="alert">
+                        Cuenta de correo valida
+                    </div>
+
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Telefono" name="telefono" formControlName="telefono">
+                    </div>
+
+                    <div *ngIf="frmContact.controls.telefono.status == 'INVALID' && frmContact.controls.telefono.touched" class="input-group alert alert-primary" role="alert">
+                        Formato de telefono invalido
+                    </div>
+
+                    <div class="input-group">
+                        <input class="input--style-2" type="text" placeholder="Mensaje" name="mensaje" formControlName="mensaje">
+                    </div>
+
+                    <div *ngIf="frmContact.status == 'VALID'" class="p-t-30">
+                        <button class="btn btn--radius btn--green" type="submit">Enviar</button>
+                    </div>
+
+                    <div *ngIf="sendmail == true" class="p-t-30">
+                        <div class="alert alert-info" role="alert">
+                           Mensaje enviado correctamente
+                          </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

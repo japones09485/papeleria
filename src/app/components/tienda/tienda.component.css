@@ -1,0 +1,23 @@
+            .img_prod {
+                width: 450px;
+                height: 300px;
+            }
+            
+            .card-columns {
+                -webkit-column-count: 4 !important;
+                -moz-column-count: 4 !important;
+                column-count: 4 !important;
+                -webkit-column-gap: 1.25rem;
+                -moz-column-gap: 1.25rem;
+                column-gap: 1.25rem;
+                orphans: 1;
+                widows: 1;
+            }
+            
+            .contenido {
+                background-color: rgb(14, 14, 15);
+            }
+            
+            .paginc {
+                background-color: #da732f !important;
+            }

@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+.welc{
+  color: white;
+  font-size: 90px;
+}
+
+.descrp{
+  font-size: 20px;
+}
+
+.hast{
+  color: red;
+  font-size: 90px;
+}
+
+h1.titt{
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    color: #5c768d;
+}
+
+*.txserv{
+  font-family: "Raleway", sans-serif;
+font-size: 45px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: black;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+h2                                                             {
+  font-family: "Mystery Quest", cursive;
+  font-size: 150%;
+}
+
+.whatsapp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:40px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top:13px;
+}
+
+.img-about{
+  text-align: left;
+  width: 160px;
+  height: 80px;
+}
+
+
+

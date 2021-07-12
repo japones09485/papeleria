@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiURL: 'https://internacionaldepapeleria.com/productos/',
+  pathImgs: 'https://internacionaldepapeleria.com/productos/'
 };

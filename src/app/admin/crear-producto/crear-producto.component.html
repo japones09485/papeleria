@@ -1,0 +1,75 @@
+<app-menu></app-menu>
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <a class="navbar-brand" href="#"><img class="logo ml-5 pl-1 text-center rounded-circle" src="../assets/img/logoi.jfif" alt=""></a>
+            <h3>Creación de Productos</h3>
+            <p>Creación de Productos para la tienda.</p>
+            <input type="submit" name="" value="Volver" routerLink="/gestorAdmin" /><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <form [formGroup]="Form" class="login100-form validate-form" (ngSubmit)="guardarProd()">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Internacional de papeleria y suministros S.A.S</h3>
+                        <div class="row register-form">
+                            <div class="col">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Nombre de producto" value="" formControlName="nombre" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Descripción del producto" value="" formControlName="descripcion" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Categoria</label>
+                                    <select class="form-control" formControlName="categoria">
+                                    <option *ngFor="let cat of categorias" [ngValue]="cat.cat_id">
+                                        {{ cat.cat_nombre }}
+                                    </option>
+                                   </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Estado</label>
+                                    <select class="form-control" name="" formControlName="estado">
+                                <option value="0">Activo</option>
+                                <option value="1">Inactivo</option>
+                               </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="imagenuno">Imagen (opcional)</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" (change)="agregarArchivo($event,1)" />
+                                        <label class="custom-file-label" for="inputGroupFile01">Agregue una imagen</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="imagendos">Imagen (opcional)</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" (change)="agregarArchivo($event,2)" />
+                                        <label class="custom-file-label" for="inputGroupFile01">Agregue una imagen</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" *ngIf="Form.valid" class="btn btn-primary btn-lg btn-block">Guardar</button>
+                                </div>
+
+                                <div class="alert alert-info m-5" role="alert" *ngIf="msj">
+                                    Producto creado exitosamente
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

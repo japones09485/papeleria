@@ -1,0 +1,61 @@
+<app-menu></app-menu>
+
+<h1 class="text-center text-warning m-2 fant">CATEGORIAS</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Fecha creación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cat of categorias">
+            <th scope="row">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-warning" data-toggle="modal" [attr.data-target]="'#editCat-'+cat.cat_id">
+                    Editar
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="editCat-{{cat.cat_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-primary" id="exampleModalLabel">Editar categoria {{cat.cat_id}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form [formGroup]="Form" class="login100-form validate-form" (ngSubmit)="editarcategoria(cat.cat_id)">
+                                    <div class="form-group">
+                                        <input placeholder="Nuevo Nombre" type="text" class="form-control" formControlName="name">
+                                        <button type="submit" class="form-control m-1 btn btn-warning">Editar</button>
+
+
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </th>
+            <td>{{ cat.cat_nombre }}</td>
+            <td>{{ cat.cat_descripcion }}</td>
+            <td *ngIf="cat.cat_estado == 0">
+                <p class="text-success">activo</p>
+            </td>
+            <td *ngIf="cat.cat_estado == 1">
+                <p class="text-danger">Inactivo</p>
+            </td>
+            <td>{{ cat.cat_fecha_creacion }}</td>
+        </tr>
+
+    </tbody>
+</table>

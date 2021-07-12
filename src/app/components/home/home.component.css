@@ -1,0 +1,49 @@
+.icons-cov {
+    display: block;
+    float: center;
+}
+
+.icons-cov img {
+    width: 100px;
+    height: 150px;
+}
+
+.text_sli_cov {
+    font-size: 30px;
+}
+
+#menu-lateral {
+    background-image: url('../../../assets/img/fondo_menu.jpg');
+    font-family: "pattay", Times, serif;
+    color: #feaa52 !important;
+}
+
+.logo {
+    height: 190px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(253, 112, 18);
+}
+
+.divm {
+    height: 33px;
+}
+
+.titorang {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textorang {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff !important;
+}
+
+.linkmenu {
+    color: #008adb;
+    font-size: 20px;
+    list-style: none;
+}
+
+.piepag {
+    background-color: chartreuse;
+}

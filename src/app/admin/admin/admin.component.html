@@ -1,0 +1,36 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form [formGroup]="Form" class="login100-form validate-form" (ngSubmit)="login()">
+                <span class="login100-form-title p-b-43">
+                    <img class="logo ml-5 pl-1 text-center" src="../assets/img/logoi.jfif" alt="">
+                </span>
+
+
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="text" name="correo" formControlName="correo">
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Email</span>
+                </div>
+
+                <div class="wrap-input100 validate-input">
+                    <input class="input100" type="password" name="pass" formControlName="password">
+                    <span class="focus-input100"></span>
+                    <span class="label-input100">Password</span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Ingresar 
+                    </button>
+                </div>
+
+                <div class="alert alert-info m-5" role="alert">
+                    Credenciales Incorrectas
+                </div>
+            </form>
+
+            <div class="login100-more" style="background-image: url('../../../assets/img/portfolio/phone-with-apps-and-modern-desk.jpg');">
+            </div>
+        </div>
+    </div>
