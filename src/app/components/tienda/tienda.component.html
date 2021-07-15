@@ -1,7 +1,7 @@
 <div class="contenido">
     <div class="row">
         <div class="col-lg-6 form-inline">
-            <input type="text" name="namesearch" class="form-control form-control-lg text-center m-3" [(ngModel)]="filts.nameSearch" placeholder="&#xF00e; Buscar Producto" style="font-family: FontAwesome;">
+            <input type="text" name="namesearch" class="form-control form-control-lg text-center m-3" [(ngModel)]="filts.nameSearch" placeholder="Que buscas?">
             <button type="submit" (click)="buscarProducto()" class="btn btn-info btn-lg m-3 paginc">Buscar</button>
             <button type="submit" (click)="ngOnInit()" class="btn btn-info btn-lg m-3 paginc">Todos los productos</button>
         </div>
@@ -11,6 +11,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="card-columns m-3">
         <div class="card bg-dark h-100 crd-pro" *ngFor="let pro of productos">
@@ -44,4 +45,3 @@
 
         <app-paginacion [nPaginas]="cantPaginas" (irPagina)="sigPag($event)"></app-paginacion>
     </div>
-</div>
